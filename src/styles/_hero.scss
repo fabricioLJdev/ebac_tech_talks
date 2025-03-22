@@ -1,0 +1,55 @@
+//editando a secção hero
+.hero{
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/fundo.png); //colocando uma image de fundo
+    background-repeat: no-repeat; //para que a imagem não se repita
+    background-size: cover; //para completar todo o tamanho do container
+    position: relative;
+
+    .container {
+        position: relative;
+    }
+
+    //escurecendo a imagem de fundo
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        content: '';
+        opacity: .7;
+    }
+
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 40px;
+        line-height: 56px;
+        color: #fff;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    &__logo {
+        margin: 0 auto;
+        height: 80;
+        display: block; //para que o margin 0 e auto funcione
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__logo {
+            height: 40px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}
