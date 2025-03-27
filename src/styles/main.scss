@@ -1,5 +1,9 @@
 //importando os arquivos
 @use 'hero';
+@use 'components/infos_bar';
+@use 'components/_buttons';
+@use 'event';
+@use 'variables';
 
 //criando o reset
 *{
@@ -7,7 +11,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    color: #fff;
+    color: variables.$textColor;
+    list-style: none;
 }
 
 // definindo a largura do container
